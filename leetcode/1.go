@@ -1,16 +1,16 @@
 package leetcode
 
 func twoSum(nums []int, target int) []int {
-	numMap := map[int]int{}
+	reqMap := map[int]int{}
+
 	for i, num := range nums {
-		toFind := target - num
-		if toFindIndex, exists := numMap[toFind]; exists {
-			return []int{
-				toFindIndex, i,
-			}
+		need := target - num
+		if req, ok := reqMap[need]; ok {
+			return []int{req, i}
 		}
-		numMap[num] = i
+		reqMap[num] = i
 	}
+
 	return nil
 }
 
