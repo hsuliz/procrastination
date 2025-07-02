@@ -11,6 +11,5 @@ func TestSearch(t *testing.T) {
 	}
 
 	res := search(given, 6)
-	fmt.Println("===")
 	fmt.Println(res)
 }
